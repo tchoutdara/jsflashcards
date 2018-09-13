@@ -10,19 +10,28 @@ function getRandomInt(question) {
 
 $genBtn.on('click', function() {
     function random_item(items)
-    {
-      
-    return items[Math.floor(Math.random()*items.length)];
-         
-    }
-    
-    let items = ['question', 'question1', 'question2', 'question3', 'question4'];
-    $text.text(random_item(items));
+    {    
+    return items[Math.floor(Math.random()*items.length)]        
+    }  
+    let items = ['question']
+    $text.text(random_item(items))
+    })
+    $ansBtn.on('click', function() {
+        if ($text === items) {
+            $text.text('answer')
+        } else {
+            $text.text('not working')
+        }
+        
+        })
 })
 
 $ansBtn.on('click', function() {
-    $text.text('This be the answer')
+if ($text.text === 'question') {
+    $text.text('answer')
+} else {
+    $text.text('not working')
+}
+
 })
  
-    
-})
