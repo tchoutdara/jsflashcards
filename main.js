@@ -13,11 +13,11 @@ $genBtn.on('click', function() {
     {    
     return items[Math.floor(Math.random()*items.length)]        
     }  
-    let items = ['question']
+    let items = ['question', 'question1', 'question2']
     $text.text(random_item(items))
     })
     $ansBtn.on('click', function() {
-        if ($text === items) {
+        if ($text.text == 'question') {
             $text.text('answer')
         } else {
             $text.text('not working')
